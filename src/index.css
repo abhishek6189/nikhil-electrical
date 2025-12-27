@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    --primary: 4 82% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 15% 15%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 4 82% 56%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 4 82% 56%;
+
+    --radius: 0.5rem;
+
+    /* Custom colors */
+    --hero-overlay: 220 20% 20%;
+    --badge-bg: 4 82% 56%;
+    --stat-number: 4 82% 56%;
+    --service-card-bg: 0 0% 100%;
+    --feature-icon-bg: 4 82% 96%;
+    --cta-gradient-start: 220 20% 18%;
+    --cta-gradient-end: 220 20% 25%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 4 82% 56%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 20% 14%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 20% 14%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 4 82% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 9% 65%;
+
+    --accent: 4 82% 56%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 4 82% 56%;
+
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 4 82% 56%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 18%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 20% 18%;
+    --sidebar-ring: 4 82% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .hero-overlay {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--hero-overlay) / 0.85) 0%,
+      hsl(var(--hero-overlay) / 0.7) 50%,
+      hsl(var(--hero-overlay) / 0.6) 100%
+    );
+  }
+
+  .badge-primary {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium;
+    background: hsl(var(--primary) / 0.15);
+    color: hsl(var(--primary));
+    border: 1px solid hsl(var(--primary) / 0.3);
+  }
+
+  .section-label {
+    @apply text-sm font-semibold uppercase tracking-wider;
+    color: hsl(var(--primary));
+  }
+
+  .stat-card {
+    @apply text-center p-6;
+  }
+
+  .stat-number {
+    @apply text-4xl md:text-5xl font-bold;
+    color: hsl(var(--primary));
+  }
+
+  .stat-label {
+    @apply text-sm mt-2;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .service-card {
+    @apply bg-card p-8 rounded-xl border border-border transition-all duration-300;
+  }
+
+  .service-card:hover {
+    @apply shadow-xl -translate-y-1;
+    border-color: hsl(var(--primary) / 0.3);
+  }
+
+  .service-icon {
+    @apply w-14 h-14 rounded-lg flex items-center justify-center mb-4;
+    background: hsl(var(--feature-icon-bg));
+    color: hsl(var(--primary));
+  }
+
+  .feature-card {
+    @apply flex items-start gap-4 p-4;
+  }
+
+  .feature-icon {
+    @apply w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0;
+    background: hsl(var(--feature-icon-bg));
+    color: hsl(var(--primary));
+  }
+
+  .cta-section {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--cta-gradient-start)) 0%,
+      hsl(var(--cta-gradient-end)) 100%
+    );
+  }
+
+  .nav-link {
+    @apply text-sm font-medium transition-colors;
+  }
+
+  .nav-link:hover {
+    color: hsl(var(--primary));
+  }
+
+  .nav-link.active {
+    color: hsl(var(--primary));
+  }
+
+  .contact-card {
+    @apply bg-card p-6 rounded-xl border border-border;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 rounded-lg border border-border bg-background transition-all duration-200;
+  }
+
+  .form-input:focus {
+    @apply outline-none ring-2;
+    ring-color: hsl(var(--primary) / 0.3);
+    border-color: hsl(var(--primary));
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
