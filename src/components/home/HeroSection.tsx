@@ -52,17 +52,31 @@ const HeroSection = () => {
           </div>
 
           {/* Phone */}
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-              <Phone className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <div>
-              <div className="text-sm text-primary-foreground/60">Call us anytime</div>
-              <a href="tel:09825014775" className="text-xl font-bold text-primary-foreground hover:text-primary transition-colors">
-                098250 14775
-              </a>
-            </div>
-          </div>
+<div className="flex items-center gap-4">
+  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+    <Phone className="w-5 h-5 text-primary-foreground" />
+  </div>
+
+  <div>
+    <div className="text-sm text-primary-foreground/60">Call us anytime</div>
+
+    <a
+      href="tel:09825014775"
+      className="block text-xl font-bold text-primary-foreground hover:text-primary transition-colors"
+    >
+      098250 14775
+    </a>
+
+    <a
+      href="tel:09723533047"
+      className="block text-xl font-bold text-primary-foreground hover:text-primary transition-colors"
+    >
+      097235 33047
+    </a>
+  </div>
+</div>
+
+
         </div>
       </div>
     </section>

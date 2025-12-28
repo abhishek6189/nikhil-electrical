@@ -76,7 +76,7 @@ const WhyChooseUsSection = () => {
               className="rounded-2xl shadow-2xl w-full object-cover aspect-[4/3]"
             />
             <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-xl">
-              <div className="text-3xl font-bold">15+</div>
+              <div className="text-3xl font-bold">20+</div>
               <div className="text-sm opacity-80">Years Experience</div>
             </div>
           </div>

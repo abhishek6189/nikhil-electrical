@@ -44,7 +44,7 @@ const About = () => {
             Nikhil Electrical Sales & Services
           </h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Government approved electrical contractors serving industries across Gujarat since 2008.
+            Government approved electrical contractors serving industries across Gujarat since 2003.
           </p>
         </div>
       </section>
@@ -56,7 +56,7 @@ const About = () => {
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-4">Our Story</h2>
               <p className="text-muted-foreground mb-4">
-                Nikhil Electrical Sales & Services was founded in 2008 with a vision to provide reliable and quality electrical solutions to the industrial sector in Gujarat.
+                Nikhil Electrical Sales & Services was founded in 2003 with a vision to provide reliable and quality electrical solutions to the industrial sector in Gujarat.
               </p>
               <p className="text-muted-foreground mb-4">
                 Over the years, we have grown from a small electrical contracting firm to a comprehensive electrical solutions provider, serving over 100 satisfied clients across various industries.
@@ -66,7 +66,7 @@ const About = () => {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                {["15+ Years Experience", "500+ Projects", "100+ Clients"].map((item, idx) => (
+                {["20+ Years Experience", "500+ Projects", "100+ Clients"].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-primary" />
                     <span className="font-medium text-foreground">{item}</span>

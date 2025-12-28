@@ -1,5 +1,5 @@
 const stats = [
-  { number: "15+", label: "Years Experience" },
+  { number: "20+", label: "Years Experience" },
   { number: "500+", label: "Projects Completed" },
   { number: "100+", label: "Happy Clients" },
   { number: "24/7", label: "Support Available" },
